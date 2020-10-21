@@ -60,6 +60,7 @@ def main():
 
     if flask.request.method == 'POST':
         m_name = flask.request.form['movie_name']
+        m_name = m_name.strip()
         chk_name = m_name.lower()
         m_name = m_name.title()
 #        check = difflib.get_close_matches(m_name,all_titles,cutout=0.50,n=1)
